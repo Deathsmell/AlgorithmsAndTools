@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import static Algorithms.FindMaxCrossingSubarray.*;
 import static java.util.Arrays.copyOfRange;
+import static java.util.Collections.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FindMaxCrossingSubarrayTest {
@@ -33,13 +33,12 @@ class FindMaxCrossingSubarrayTest {
 
     @Test
     public void correctDisplayOfTheSearchResultAsAString() {
-        List<String> expected = Collections.singletonList(stringResult(sourceArray));
-        List<String> actual = Collections.singletonList(correctStringResult);
-
-        boolean matches = Pattern.compile(matcherCorrectStringResult).matcher(stringResult(sourceArray)).matches();
+        List<String> expected = singletonList(matcherCorrectStringResult);
+        List<String> actual = singletonList(stringResult(sourceArray));
+        List<String> correct = singletonList(correctStringResult);
 
         assertLinesMatch(expected, actual);
-        assertTrue(matches);
+        assertLinesMatch(expected, correct);
     }
 
 
