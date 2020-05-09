@@ -1,9 +1,8 @@
-import Algorithms.InsertionSort;
-
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class Main {
+
+
 
     public static void main(String[] args) {
 
@@ -14,9 +13,11 @@ public class Main {
                 .toArray(Double[]::new);
 
         // Сортировка вставкой
-        Double[] result = InsertionSort.sort(arr);
+//        Double[] result = InsertionSort.sort(arr);
 
-        Arrays.stream(result)
-                .forEach(System.out::println);
+//        Arrays.stream(result)
+//                .forEach(System.out::println);
     }
+
+
 }
